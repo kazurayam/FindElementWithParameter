@@ -24,12 +24,22 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://demoaut-mimic.kazurayam.com/xpath_with_parameter_testbed.html')
 
-def arabicInput = WebUI.getText()
-WebUI.click(findTestObject('Page_/label_arabic'))
+// HTML source:
+//     <div id="arabic"><label>اسم المستخدماسم المستخدم</label><input type="text" value="foo"></div>
+//     <div id="english"><label>User name</label><input type="text" value="bar"></div>
+//     <div id="руский"><label>Ваша имя</label><input type="text" value="baz"></div>
 
-WebUI.click(findTestObject('Page_/label_english'))
+def label_value_en = WebUI.getText(findTestObject('Page_/label_en'))
+WebUI.verifyEqual(label_value_ar, 'User name')
 
-WebUI.click(findTestObject('Page_/label_russia'))
+//def label_value_ar = WebUI.getText(findTestObject('Page_/label_arabic'))
+//WebUI.verifyEqual(label_value_ar, 'اسم المستخدم')
+
+def label_value_en2 = WebUI.getText(findTestObject('Page_/label_indexed_by_i18n_name', ['index':'User name']))
+WebUI.verifyEqual(label_value_en2, 'User name')
+
+def input_value_en = WebUI.getText(findTestObject('Page_/input_indexed_by_i18n_name', ['index':'User name']))
+WebUI.verifyEqual(input_value_en, 'bar')
 
 WebUI.closeBrowser()
 

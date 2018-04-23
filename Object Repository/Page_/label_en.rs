@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>label_russia</name>
+   <name>label_en</name>
    <tag></tag>
-   <elementGuidId>5a87480c-43fb-4db0-b9cb-6032d6ed8ea4</elementGuidId>
+   <elementGuidId>ca438323-fdad-4396-bd4f-aff0a47776c7</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -18,13 +18,13 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Ваша имя</value>
+      <value>اسم المستخدماسم المستخدم</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;руский&quot;)/label[1]</value>
+      <value>id(&quot;arabic&quot;)/label[1]</value>
    </webElementProperties>
 </WebElementEntity>

@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>label_english</name>
+   <name>label_indexed_by_i18n_name</name>
    <tag></tag>
-   <elementGuidId>c49122e8-ea79-4eed-83f3-d737fa9ea079</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <elementGuidId>5a87480c-43fb-4db0-b9cb-6032d6ed8ea4</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//label[@text=${index}][1]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//label[(text() = 'Ваша имя' or . = 'Ваша имя')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -18,13 +28,13 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>User name</value>
+      <value>Ваша имя</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;english&quot;)/label[1]</value>
+      <value>id(&quot;руский&quot;)/label[1]</value>
    </webElementProperties>
 </WebElementEntity>
