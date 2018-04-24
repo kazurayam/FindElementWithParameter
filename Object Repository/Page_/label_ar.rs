@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>label_arabic</name>
+   <name>label_ar</name>
    <tag></tag>
    <elementGuidId>8f5e4540-7369-407a-8f2c-6bd2d9367ed7</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//label[(text() = 'اسم المستخدم' or . = 'اسم المستخدم')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -18,7 +24,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>اسم المستخدماسم المستخدم</value>
+      <value>اسم المستخدم</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

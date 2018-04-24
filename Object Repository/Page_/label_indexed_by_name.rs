@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_indexed_by_i18n_name</name>
+   <name>label_indexed_by_name</name>
    <tag></tag>
-   <elementGuidId>5c672b5b-6d8d-4d63-928d-7d712698bbd5</elementGuidId>
+   <elementGuidId>5a87480c-43fb-4db0-b9cb-6032d6ed8ea4</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[text()=${index}]/following::input[@type='text'][1]</value>
+         <value></value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value>//label[(text() = 'اسم المستخدماسم المستخدم' or . = 'اسم المستخدماسم المستخدم')]</value>
+         <value>//label[(text() = '${index}' or . = '${index}')]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -28,13 +28,6 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>اسم المستخدماسم المستخدم</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath</name>
-      <type>Main</type>
-      <value>id(&quot;arabic&quot;)/label[1]</value>
+      <value>${index}</value>
    </webElementProperties>
 </WebElementEntity>
