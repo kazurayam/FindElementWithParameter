@@ -62,7 +62,7 @@ def label_ar_param = WebUI.getText(
 WebUI.verifyEqual(label_ar_param, 'اسم المستخدم')
 
 
-WebUI.comment('>>> 4')
+WebUI.comment('>>> 5')
 //     <div id="english"><label>User name</label><input type="text" value="foo"></div>
 //                                                                         ^^^
 def input_en = WebUI.getAttribute(
@@ -71,7 +71,7 @@ def input_en = WebUI.getAttribute(
 WebUI.verifyEqual(input_en, 'foo')
 
 
-WebUI.comment('>>> 5')
+WebUI.comment('>>> 6')
 //     <div id="arabic"><label>اسم المستخدم</label><input type="text" value="bar"></div>
 //                                                                     ^^^
 def input_ar = WebUI.getAttribute(
