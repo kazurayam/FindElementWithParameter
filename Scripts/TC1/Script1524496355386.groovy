@@ -21,36 +21,64 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
+WebUI.setViewPortSize(360, 800)
+WebUI.navigateToUrl('http://demoaut-mimic.kazurayam.com/14291_testbed.html')
 
-WebUI.navigateToUrl('http://demoaut-mimic.kazurayam.com/xpath_with_parameter_testbed.html')
+
 
 // HTML source:
 //   <body>
-//     <div id="arabic"><label>اسم المستخدماسم المستخدم</label><input type="text" value="foo"></div>
-//     <div id="english"><label>User name</label><input type="text" value="bar"></div>
-//     <div id="руский"><label>Ваша имя</label><input type="text" value="baz"></div>
+//     <div id="english"><label>User name</label><input type="text" value="foo"></div>
+//     <div id="arabic"><label>اسم المستخدم</label><input type="text" value="bar"></div>
 //   </body>
 
 WebUI.comment('>>> 1')
+//     <div id="english"><label>User name</label><input type="text" value="foo"></div>
+//                              ^^^^^^^^^
 def label_en = WebUI.getText(findTestObject('Page_/label_en'))
 WebUI.verifyEqual(label_en, 'User name')
 
+
 WebUI.comment('>>> 2')
+//     <div id="arabic"><label>اسم المستخدم</label><input type="text" value="bar"></div>
+//                             ^^^^^^
 def label_ar = WebUI.getText(findTestObject('Page_/label_ar'))
 WebUI.verifyEqual(label_ar, 'اسم المستخدم')
 
+
 WebUI.comment('>>> 3')
+//     <div id="english"><label>User name</label><input type="text" value="foo"></div>
+//                              ^^^^^^^^^
 def label_en_param = WebUI.getText(
-    findTestObject('Page_/label_indexed_by_name', ['index':'User name']))
+    findTestObject('Page_/label_parameterized', ['index':'User name']))
 WebUI.verifyEqual(label_en_param, 'User name')
 
+
 WebUI.comment('>>> 4')
+//     <div id="arabic"><label>اسم المستخدم</label><input type="text" value="bar"></div>
+//                              ^^^^^^
+def label_ar_param = WebUI.getText(
+    findTestObject('Page_/label_parameterized', ['index':'اسم المستخدم']))
+WebUI.verifyEqual(label_ar_param, 'اسم المستخدم')
+
+
+WebUI.comment('>>> 4')
+//     <div id="english"><label>User name</label><input type="text" value="foo"></div>
+//                                                                         ^^^
 def input_en = WebUI.getAttribute(
-    findTestObject('Page_/input_sibling_to_label_indexed_by_name', ['index':'User name']),
+    findTestObject('Page_/input_next_to_label_parameterized', ['index':'User name']),
     'value')
-WebUI.verifyEqual(input_en, 'bar')
+WebUI.verifyEqual(input_en, 'foo')
+
 
 WebUI.comment('>>> 5')
+//     <div id="arabic"><label>اسم المستخدم</label><input type="text" value="bar"></div>
+//                                                                     ^^^
+def input_ar = WebUI.getAttribute(
+    findTestObject('Page_/input_next_to_label_parameterized', ['index':'اسم المستخدم']),
+    'value')
+WebUI.verifyEqual(input_ar, 'bar')
+
 
 WebUI.closeBrowser()
 

@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>label_indexed_by_name</name>
+   <name>input_next_to_label_parameterized</name>
    <tag></tag>
-   <elementGuidId>5a87480c-43fb-4db0-b9cb-6032d6ed8ea4</elementGuidId>
+   <elementGuidId>5c672b5b-6d8d-4d63-928d-7d712698bbd5</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value></value>
+         <key>BASIC</key>
+         <value>//label[text()='${index}']/following-sibling::input</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>//label[(text() = '${index}' or . = '${index}')]</value>
+         <key>XPATH</key>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>label</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
       <value>${index}</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//label[text()='${index}']/following-sibling::input</value>
    </webElementProperties>
 </WebElementEntity>
